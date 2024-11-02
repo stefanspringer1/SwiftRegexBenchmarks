@@ -27,7 +27,7 @@ func measure(text: String, regex: Regex<(Substring, Substring, Substring, Substr
     
     var count = 0
     let result = clock.measure {
-        for _ in 1...10_000 {
+        for _ in 1...100_000 {
             for _ in data.matches(of: regex) {
                 //print(text[match.range.lowerBound..<match.range.upperBound])
                 count += 1
